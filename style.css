@@ -96,7 +96,7 @@ nav .delete-task {
   margin-bottom: 0.2rem;
 }
 nav .delete-task:hover {
-  background-color: #b8b7b7;
+  background-color: #555555;
   color: #fff;
 }
 
@@ -123,4 +123,47 @@ main .add-list {
   border: none;
   border-radius: 0.2rem;
   color: #555555;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+}
+
+main .add-list-card {
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 12rem;
+  height: 10rem;
+  background-color: #f0f0f0e6;
+  padding: 0.7rem;
+  position: absolute;
+}
+
+.add-list-card textarea {
+  resize: none;
+  padding: 0.4rem;
+  font-size: 0.85rem;
+  color: #f0f0f0e6;
+}
+
+main .btn {
+  width: fit-content;
+  background-color: #808000;
+  color: #f0f0f0f6;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.action .fa-times {
+  color: #555555;
+  font-size: 1.8rem;
 }
