@@ -104,6 +104,7 @@ nav .delete-task:hover {
 nav .fa-ellipsis-v {
   cursor: pointer;
   padding: 0.4rem;
+  position: relative;
 }
 
 nav .fa-ellipsis-v:hover {
