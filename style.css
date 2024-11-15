@@ -1,3 +1,4 @@
 body {
   background-image: url("./images/bg-rain-drops-on-window-shield.jpg");
+  background-attachment: fixed;
 }
