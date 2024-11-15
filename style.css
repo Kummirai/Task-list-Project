@@ -93,6 +93,7 @@ nav .delete-task {
   display: flex;
   width: 12rem;
   align-items: center;
+  margin-bottom: 0.2rem;
 }
 nav .delete-task:hover {
   background-color: #b8b7b7;
