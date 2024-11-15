@@ -123,6 +123,10 @@ main .add-list {
   font-size: 0.9em;
   font-weight: 500;
 }
+main .add-list:hover{
+  cursor: pointer;
+  background-color: #c9c9c9;
+}
 
 main {
   display: flex;
@@ -149,7 +153,7 @@ main .add-list-card {
   resize: none;
   padding: 0.4rem;
   font-size: 0.85rem;
-  color: #f0f0f0e6;
+  color: #555555;
 }
 
 main .btn {
@@ -168,4 +172,9 @@ main .btn {
 .action .fa-times {
   color: #555555;
   font-size: 1.8rem;
+}
+
+.action .fa-times:hover{
+  color: #929292;
+  cursor: pointer;
 }

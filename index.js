@@ -34,6 +34,7 @@ cardBtn.addEventListener("click", () => {
           </div>`;
 
     cardContainer.innerHTML = card;
+    cardBtn.style.display = "none";
     updateUI();
   }
 });
@@ -46,6 +47,7 @@ function updateUI() {
       cardContainer.style.display = "none";
       card = " ";
       cardContainer.innerHTML = card;
+      cardBtn.style.display = "flex";
     }
   });
 }
