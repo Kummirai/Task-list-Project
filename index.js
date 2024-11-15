@@ -3,19 +3,11 @@ const menu = document.querySelector(".menu");
 const cardBtn = document.querySelector(".add-list");
 const cardContainer = document.querySelector(".add-cards");
 
-const menuShown = () => {
-  menu.style.display = "flex";
-};
-
-const hideMenu = () => {
-  menu.style.display = "none";
-};
-
 showMenu.addEventListener("click", () => {
   if (menu.style.display === "none") {
-    menuShown();
+    menu.style.display = "flex";
   } else if (menu.style.display === "flex") {
-    hideMenu();
+    menu.style.display = "none";
   }
 });
 
