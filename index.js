@@ -1,5 +1,18 @@
-const menu = document.querySelector(".fa-ellipsis-v");
+const showMenu = document.querySelector(".fa-ellipsis-v");
+const menu = document.querySelector(".menu");
 
-menu.addEventListener("click", () => {
-  console.log("you clicked me!");
+const menuShown = () => {
+  menu.style.display = "flex";
+};
+
+const hideMenu = () => {
+  menu.style.display = "none";
+};
+
+showMenu.addEventListener("click", () => {
+  if (menu.style.display === "none") {
+    menuShown();
+  } else if (menu.style.display === "flex") {
+    hideMenu();
+  }
 });
