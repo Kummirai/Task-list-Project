@@ -94,6 +94,14 @@ nav .delete-task {
   align-items: center;
 }
 
+nav .fa-ellipsis-v {
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+nav .fa-ellipsis-v:hover {
+  background-color: #408faca8;
+}
 nav .fa-times,
 .fa-save {
   margin: 0 1rem 0 0.4rem;
