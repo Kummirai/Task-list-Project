@@ -60,3 +60,8 @@ header input {
   background-color: #4090ac;
   border: none;
 }
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
