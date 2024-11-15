@@ -78,6 +78,7 @@ nav {
   backdrop-filter: blur(0px) saturate(180%);
   -webkit-backdrop-filter: blur(0px) saturate(180%);
   background-color: rgba(128, 128, 128, 0.3);
+  position: relative;
 }
 
 nav .menu {
@@ -104,7 +105,7 @@ nav .delete-task:hover {
 nav .fa-ellipsis-v {
   cursor: pointer;
   padding: 0.4rem;
-  position: relative;
+  
 }
 
 nav .fa-ellipsis-v:hover {
