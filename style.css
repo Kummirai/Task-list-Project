@@ -78,3 +78,19 @@ nav {
   -webkit-backdrop-filter: blur(0px) saturate(180%);
   background-color: rgba(128, 128, 128, 0.3);
 }
+
+nav .menu {
+  background-color: #fff;
+  color: #000;
+}
+
+nav .delete-task {
+  display: flex;
+  width: 12rem;
+  align-items: center;
+}
+
+nav .fa-times,
+.fa-save {
+  margin: 0 1rem 0 0.4rem;
+}
