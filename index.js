@@ -47,7 +47,7 @@ function updateUI() {
   const addListTitle = document.querySelector(".list-title");
   const textAreaInput = document.querySelector("#add-list-title");
 
-  textAreaInput.addEventListener("input", (event) => {
+  textAreaInput.addEventListener("change", (event) => {
     const title = event.target.value;
     addListTitle.addEventListener("click", () => {
       const listTitle = `
@@ -61,17 +61,21 @@ function updateUI() {
       const addCard = document.querySelector(".add-card");
 
       addCard.addEventListener("click", () => {
-        console.log("you Clicked me !");
+        const cardInput = `
+          <input type="text" id="card-input">
+        `;
+
+        addCard.insertAdjacentHTML("beforebegin", cardInput);
       });
 
       const addAnotherList = `
-        <div class="add-list-card">
+        <div >
           <button class="add-list">Add Another List</button>
         </div>
       `;
       console.log(addAnotherList);
 
-      mainSection.insertAdjacentElement("beforebegin", addAnotherList);
+      mainSection.insertAdjacentHTML("beforeend", addAnotherList);
     });
   });
 }
