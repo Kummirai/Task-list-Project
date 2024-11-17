@@ -19,9 +19,9 @@ cardBtn.addEventListener("click", () => {
   if (cardContainer.style.display === "none") {
     cardContainer.style.display = "flex";
     card = `<div class="add-list-card">
-          <textarea rows="4" cols="50" placeholder="Enter titile for this card ..."></textarea>
+          <textarea id="add-list-title" rows="4" cols="50" placeholder="Enter titile for this card ..."></textarea>
           <div class="action">
-            <button class="add-list btn">Add List</button>
+            <button class="add-list list-title">Add List</button>
             <i id="close" class="fas fa-times"></i>
           </div>`;
 
@@ -41,5 +41,23 @@ function updateUI() {
       cardContainer.innerHTML = card;
       cardBtn.style.display = "flex";
     }
+  });
+
+  const addListTitle = document.querySelector(".list-title");
+  const textAreaInput = document.querySelector("#add-list-title");
+
+  textAreaInput.addEventListener("input", (event) => {
+    const title = event.target.value;
+    addListTitle.addEventListener("click", () => {
+      const listTitle = `
+          <div>
+            <h2>${title}</h2>
+            <p>+ Add Card</p>
+            </div>
+        `;
+      console.log(title);
+
+      cardContainer.innerHTML = listTitle;
+    });
   });
 }
