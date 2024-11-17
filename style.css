@@ -214,3 +214,11 @@ main .btn {
   background-color: #808000;
   color: #fff;
 }
+
+#card-input {
+  border-radius: 0.2rem;
+  border: none;
+  height: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+

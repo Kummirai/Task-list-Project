@@ -3,6 +3,7 @@ const menu = document.querySelector(".menu");
 const cardBtn = document.querySelector(".add-list");
 const cardContainer = document.querySelector(".add-cards");
 const mainSection = document.querySelector("main");
+const homeButton = document.querySelector(".home-button");
 
 showMenu.addEventListener("click", () => {
   if (menu.style.display === "none") {
@@ -14,19 +15,17 @@ showMenu.addEventListener("click", () => {
 
 //add list functions
 
-let card = "";
-
-cardBtn.addEventListener("click", () => {
-  if (cardContainer.style.display === "none") {
-    cardContainer.style.display = "flex";
-    card = `<div class="add-list-card">
+let card = `<div class="add-list-card">
           <textarea id="add-list-title" rows="4" cols="50" placeholder="Enter titile for this card ..."></textarea>
           <div class="action">
             <button class="add-list list-title">Add List</button>
             <i id="close" class="fas fa-times"></i>
           </div>`;
 
-    cardContainer.innerHTML = card;
+cardBtn.addEventListener("click", () => {
+  if (cardContainer.style.display === "none") {
+    cardContainer.style.display = "flex";
+    card = cardContainer.innerHTML = card;
     cardBtn.style.display = "none";
     updateUI();
   }
@@ -38,7 +37,6 @@ function updateUI() {
   closeCard.addEventListener("click", () => {
     if (cardContainer.style.display === "flex") {
       cardContainer.style.display = "none";
-      card = " ";
       cardContainer.innerHTML = card;
       cardBtn.style.display = "flex";
     }
@@ -56,6 +54,7 @@ function updateUI() {
             <p class="add-card">+ Add Card</p>
             </div>
         `;
+      homeButton.style.display = "none";
       cardContainer.innerHTML = listTitle;
 
       const addCard = document.querySelector(".add-card");
