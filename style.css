@@ -132,7 +132,7 @@ main .add-list:hover {
 
 main {
   display: grid;
-  grid-template-columns: repeat(12, 12rem);
+  grid-template-columns: repeat(12, 15rem);
   height: 100%;
   padding: 1.1rem;
   position: relative;
@@ -188,7 +188,7 @@ main .btn {
 .list-card {
   background-color: #f0f0f0e6;
   height: fit-content;
-  width: 12rem;
+  width: 15rem;
   padding: 0.6rem;
   border-radius: 0.2rem;
   color: #555555;
