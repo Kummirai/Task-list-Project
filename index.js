@@ -67,7 +67,8 @@ function updateUI() {
       const addCard = document.querySelector(".add-card");
 
       addCard.addEventListener("click", () => {
-        const cardItemInput = document.querySelector(".add-card-item");
+        const cardItemInput = document.querySelector(
+          ".add-card-item");
 
         cardItemInput.style.display = "flex";
         cardItemInput.innerHTML = list;
