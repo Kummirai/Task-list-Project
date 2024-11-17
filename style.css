@@ -181,7 +181,7 @@ main .btn {
 }
 
 .list-card {
-  background-color: #c9c9c9;
+  background-color: #f0f0f0e6;
   height: fit-content;
   width: 12rem;
   padding: 0.6rem;
@@ -194,8 +194,9 @@ main .btn {
   padding: 0.1rem 0;
 }
 
-.list-card .add-card:hover{
-  background-color: #c9c9c9;
+.list-card .add-card:hover {
+  color: #919191;
+  cursor: pointer;
 }
 
 .list-card .title {
