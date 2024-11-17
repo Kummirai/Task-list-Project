@@ -105,7 +105,6 @@ nav .delete-task:hover {
 nav .fa-ellipsis-v {
   cursor: pointer;
   padding: 0.4rem;
-  
 }
 
 nav .fa-ellipsis-v:hover {
@@ -125,7 +124,7 @@ main .add-list {
   font-size: 0.9em;
   font-weight: 500;
 }
-main .add-list:hover{
+main .add-list:hover {
   cursor: pointer;
   background-color: #c9c9c9;
 }
@@ -176,7 +175,31 @@ main .btn {
   font-size: 1.8rem;
 }
 
-.action .fa-times:hover{
+.action .fa-times:hover {
   color: #929292;
   cursor: pointer;
+}
+
+.list-card {
+  background-color: #c9c9c9;
+  height: fit-content;
+  width: 12rem;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  color: #555555;
+}
+
+.list-card .add-card {
+  font-size: 0.75rem;
+  padding: 0.1rem 0;
+}
+
+.list-card .add-card:hover{
+  background-color: #c9c9c9;
+}
+
+.list-card .title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.4rem 0;
 }
