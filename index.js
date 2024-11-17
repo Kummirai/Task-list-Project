@@ -2,6 +2,7 @@ const showMenu = document.querySelector(".fa-ellipsis-v");
 const menu = document.querySelector(".menu");
 const cardBtn = document.querySelector(".add-list");
 const cardContainer = document.querySelector(".add-cards");
+const mainSection = document.querySelector("main");
 
 showMenu.addEventListener("click", () => {
   if (menu.style.display === "none") {
@@ -50,14 +51,21 @@ function updateUI() {
     const title = event.target.value;
     addListTitle.addEventListener("click", () => {
       const listTitle = `
-          <div>
-            <h2>${title}</h2>
-            <p>+ Add Card</p>
+          <div class="list-card">
+            <p class="title">${title}</p>
+            <p class="add-card">+ Add Card</p>
             </div>
         `;
-      console.log(title);
-
       cardContainer.innerHTML = listTitle;
+
+      const addAnotherList = `
+        <div class="add-list-card">
+          <button class="add-list">Add Another List</button>
+        </div>
+      `;
+      console.log(addAnotherList);
+
+      mainSection.insertAdjacentElement("beforebegin", addAnotherList);
     });
   });
 }
