@@ -27,18 +27,21 @@ let list = `<div class="add-list-card">
             <i id="close" class="fas fa-times"></i>
           </div>`;
 
-cardBtn.addEventListener("click", () => {
-  if (cardContainer.style.display === "none") {
-    cardContainer.style.display = "flex";
-    card = cardContainer.innerHTML = card;
-    cardBtn.style.display = "none";
-    updateUI();
-  }
-});
+const showCard = () => {
+  cardBtn.addEventListener("click", () => {
+    if (cardContainer.style.display === "none") {
+      cardContainer.style.display = "flex";
+      card = cardContainer.innerHTML = card;
+      cardBtn.style.display = "none";
+      updateUI();
+    }
+  });
+};
+
+showCard();
 
 function updateUI() {
   const closeCard = document.querySelector("#close");
-
   closeCard.addEventListener("click", () => {
     if (cardContainer.style.display === "flex") {
       cardContainer.style.display = "none";
@@ -67,8 +70,7 @@ function updateUI() {
       const addCard = document.querySelector(".add-card");
 
       addCard.addEventListener("click", () => {
-        const cardItemInput = document.querySelector(
-          ".add-card-item");
+        const cardItemInput = document.querySelector(".add-card-item");
 
         cardItemInput.style.display = "flex";
         cardItemInput.innerHTML = list;
@@ -84,6 +86,7 @@ function updateUI() {
 
         cardValue.addEventListener("change", (event) => {
           const item = event.target.value;
+          console.log(item);
 
           const cardInput = `
             <input type="text" id="card-input" value=${item}>
@@ -98,11 +101,14 @@ function updateUI() {
         <div >
           <button class="add-list another-list">Add Another List</button>
         </div>
+        <div class="add-cards" style="display: none;"></div>
+        </div>
       `;
 
       mainSection.insertAdjacentHTML("beforeend", addAnotherList);
 
       const addAnotherCard = document.querySelector(".another-list");
+
       addAnotherCard.addEventListener("click", () => {
         console.log(addAnotherCard);
       });
