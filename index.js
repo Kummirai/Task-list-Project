@@ -75,28 +75,23 @@ function updateUI() {
         cardItemInput.innerHTML = list;
 
         const closeCard = document.querySelector("#close");
-        const addCard = document.querySelector(".list-title");
+        const addCard = document.querySelector(".add-card");
 
         closeCard.addEventListener("click", () => {
           cardItemInput.style.display = "none";
         });
 
-        addCard.addEventListener("click", () => {
-          const cardValue = document.querySelector("#add-list-title");
+        const cardValue = document.querySelector("#add-list-title");
 
-          console.log(cardValue);
+        cardValue.addEventListener("change", (event) => {
+          const item = event.target.value;
+          
+          const cardInput = `
+            <input type="text" id="card-input" value=${item}>
+          `;
 
-          cardValue.addEventListener("change", (event) => {
-            const item = event.target.value;
-
-            console.log(item);
-
-            //   const cardInput = `
-            //   // <input type="text" id="card-input" value=${item}>
-            // `;
-            addCard.insertAdjacentHTML("beforebegin", cardInput);
-            cardItemInput.style.display = "none";
-          });
+          cardItemInput.style.display = "none";
+          addCard.insertAdjacentHTML("beforebegin", cardInput);
         });
       });
 

@@ -222,8 +222,11 @@ main .btn {
 }
 
 #card-input {
+  width: 100%;
   border-radius: 0.2rem;
   border: none;
   height: 1.6rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color: #929292;
 }
