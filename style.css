@@ -146,7 +146,7 @@ main .add-list-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 15rem;
+  width: 12rem;
   height: 10rem;
   background-color: #f0f0f0e6;
   padding: 0.7rem;
@@ -197,6 +197,12 @@ main .btn {
 .list-card .add-card {
   font-size: 0.75rem;
   padding: 0.1rem 0;
+  position: relative;
+}
+
+.add-card-item {
+  position: absolute;
+  left: 0;
 }
 
 .list-card .add-card:hover {
@@ -221,4 +227,3 @@ main .btn {
   height: 1.6rem;
   margin-bottom: 0.2rem;
 }
-

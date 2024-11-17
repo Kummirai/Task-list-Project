@@ -22,6 +22,13 @@ let card = `<div class="add-list-card">
             <i id="close" class="fas fa-times"></i>
           </div>`;
 
+let list = `<div class="add-list-card">
+          <textarea id="add-list-title" rows="4" cols="50" placeholder="Enter titile for this card ..."></textarea>
+          <div class="action">
+            <button class="add-list list-title">Add Card</button>
+            <i id="close" class="fas fa-times"></i>
+          </div>`;
+
 cardBtn.addEventListener("click", () => {
   if (cardContainer.style.display === "none") {
     cardContainer.style.display = "flex";
@@ -52,7 +59,9 @@ function updateUI() {
           <div class="list-card">
             <p class="title">${title}</p>
             <p class="add-card">+ Add Card</p>
+            <div class="add-card-item" >
             </div>
+          </div>
         `;
       homeButton.style.display = "none";
       cardContainer.innerHTML = listTitle;
@@ -60,21 +69,49 @@ function updateUI() {
       const addCard = document.querySelector(".add-card");
 
       addCard.addEventListener("click", () => {
-        const cardInput = `
-          <input type="text" id="card-input">
-        `;
+        const cardItemInput = document.querySelector(".add-card-item");
 
-        addCard.insertAdjacentHTML("beforebegin", cardInput);
+        cardItemInput.style.display = "flex";
+        cardItemInput.innerHTML = list;
+
+        const closeCard = document.querySelector("#close");
+        const addCard = document.querySelector(".list-title");
+
+        closeCard.addEventListener("click", () => {
+          cardItemInput.style.display = "none";
+        });
+
+        addCard.addEventListener("click", () => {
+          const cardValue = document.querySelector("#add-list-title");
+
+          console.log(cardValue);
+
+          cardValue.addEventListener("change", (event) => {
+            const item = event.target.value;
+
+            console.log(item);
+
+            //   const cardInput = `
+            //   // <input type="text" id="card-input" value=${item}>
+            // `;
+            addCard.insertAdjacentHTML("beforebegin", cardInput);
+            cardItemInput.style.display = "none";
+          });
+        });
       });
 
       const addAnotherList = `
         <div >
-          <button class="add-list">Add Another List</button>
+          <button class="add-list another-list">Add Another List</button>
         </div>
       `;
-      console.log(addAnotherList);
 
       mainSection.insertAdjacentHTML("beforeend", addAnotherList);
+
+      const addAnotherCard = document.querySelector(".another-list");
+      addAnotherCard.addEventListener("click", () => {
+        console.log(addAnotherCard);
+      });
     });
   });
 }
