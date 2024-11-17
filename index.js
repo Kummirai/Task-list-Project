@@ -13,8 +13,6 @@ showMenu.addEventListener("click", () => {
   }
 });
 
-//add list functions
-
 let card = `<div class="add-list-card">
           <textarea id="add-list-title" rows="4" cols="50" placeholder="Enter titile for this card ..."></textarea>
           <div class="action">
@@ -85,7 +83,7 @@ function updateUI() {
 
         cardValue.addEventListener("change", (event) => {
           const item = event.target.value;
-          
+
           const cardInput = `
             <input type="text" id="card-input" value=${item}>
           `;
