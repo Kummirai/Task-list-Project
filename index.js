@@ -58,6 +58,12 @@ function updateUI() {
         `;
       cardContainer.innerHTML = listTitle;
 
+      const addCard = document.querySelector(".add-card");
+
+      addCard.addEventListener("click", () => {
+        console.log("you Clicked me !");
+      });
+
       const addAnotherList = `
         <div class="add-list-card">
           <button class="add-list">Add Another List</button>
